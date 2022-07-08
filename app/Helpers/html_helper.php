@@ -34,3 +34,17 @@ function show_erros($erros = null)
     }
 }
 
+function listAtivo()
+{
+    return [
+        '' => '-- Selecione --',
+        's' => 'Sim',
+        'n' => 'Não'
+    ];
+}
+
+function getAtivo($opcao)
+{
+    return ($opcao == 's') ? 'Sim' : 'Não';
+}
+

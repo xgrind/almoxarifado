@@ -8,9 +8,7 @@
 
 <div class="mb-3">
 
-    <?= form_label('Almoxarifado', 'almoxarifado', [
-        'class' => 'form-label'
-    ]) ?>
+    <?= form_label('Almoxarifado', 'almoxarifado', ['class' => 'form-label']) ?>
 
     <div class="row">
 
@@ -32,11 +30,7 @@
                 'name' => 'ativo',
                 'id' => 'ativo',
                 'class' => 'form-select'
-            ], [
-                '' => '-- Selecione --',
-                's' => 'Sim',
-                'n' => 'Não'
-            ], $grupo->ativo) ?>
+            ], listAtivo(), $grupo->ativo) ?>
         </div>
     </div>
 

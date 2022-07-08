@@ -16,7 +16,8 @@
         <option value="">-- Selecione --</option>
 
         <?php foreach ($almoxarifados as $almoxarifado) : ?>
-            <option value="<?= $almoxarifado->id ?>">
+            <option value="<?= $almoxarifado->id ?>"
+                <?= set_select('almoxarifado_id', $almoxarifado->id, $almoxarifado->id == $grupo->almoxarifado_id) ?>>
                 <?= $almoxarifado->descricao ?>
             </option>
         <?php endforeach ?>

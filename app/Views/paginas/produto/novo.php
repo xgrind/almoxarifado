@@ -16,7 +16,8 @@
         <option value="">-- Selecione --</option>
 
         <?php foreach ($grupos as $grupo) : ?>
-            <option value="<?= $grupo->id ?>">
+            <option value="<?= $grupo->id ?>"
+                <?= set_select('grupo_id', $grupo->id, $grupo->id == $produto->grupo_id) ?>>
                 <?= $grupo->descricao ?>
             </option>
         <?php endforeach ?>

@@ -4,10 +4,7 @@
 
 <?= show_session() ?>
 
-<?= anchor('almoxarifados/novo', 'Novo', [
-    'class' => 'btn btn-primary'
-]) ?>
-
+<?= anchor('almoxarifados/novo', 'Novo', ['class' => 'btn btn-primary']) ?>
 
 <table class="table">
     <thead>
@@ -24,7 +21,7 @@
             <tr>
                 <th scope="row"><?= $almoxarifado->id ?></th>
                 <td><?= $almoxarifado->descricao ?></td>
-                <td><?= ($almoxarifado->ativo == 's') ? 'Sim' : 'Não' ?></td>
+                <td><?= getAtivo($almoxarifado->ativo) ?></td>
                 <td>
                     <?= anchor("almoxarifados/$almoxarifado->id/editar", 'Editar') ?>
                     <?= anchor("almoxarifados/$almoxarifado->id/excluir", 'Excluir') ?>

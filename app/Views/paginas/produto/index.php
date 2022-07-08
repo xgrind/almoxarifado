@@ -4,10 +4,7 @@
 
 <?= show_session() ?>
 
-<?= anchor('produtos/novo', 'Novo', [
-    'class' => 'btn btn-primary'
-]) ?>
-
+<?= anchor('produtos/novo', 'Novo', ['class' => 'btn btn-primary']) ?>
 
 <table class="table">
     <thead>
@@ -26,7 +23,7 @@
                 <th scope="row"><?= $produto->id ?></th>
                 <td><?= $produto->nome ?></td>                
                 <td><?= $produto->grupo ?></td>   
-                <td><?= ($produto->ativo == 's') ? 'Sim' : 'Não' ?></td>
+                <td><?= getAtivo($produto->ativo) ?></td>
                 <td>
                     <?= anchor("produtos/$produto->id/editar", 'Editar') ?>
                     <?= anchor("produtos/$produto->id/excluir", 'Excluir') ?>

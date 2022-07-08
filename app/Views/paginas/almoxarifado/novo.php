@@ -8,9 +8,7 @@
 
 <div class="mb-3">    
 
-    <?= form_label('Descrição', 'descricao', [
-        'class' => 'form-label'
-    ]) ?>
+    <?= form_label('Descrição', 'descricao', ['class' => 'form-label']) ?>
 
     <?= form_textarea([
         'name' => 'descricao',
